@@ -1,4 +1,4 @@
-package ar.com.ada.api.eriflix;
+package ar.com.ada.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

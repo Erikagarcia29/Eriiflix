@@ -1,6 +1,8 @@
 package ar.com.ada.api.eriflix.controllers;
+
 import java.util.*;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +24,7 @@ public class SerieController {
         GenericResponse response = new GenericResponse();
         response.isOK = true;
         response.message =  "Serie creada con exito!";
-        response.id= serieInfo.get_id().toHexString();
+        response.id= serieInfo.get_id();//.toHexString();
 
         return  ResponseEntity.ok(response);
     }
@@ -32,4 +34,20 @@ public class SerieController {
 
         return ResponseEntity.ok(serieService.listarSeries());
     }
+
+
+    @GetMapping("/api/series/{id}")
+    public ResponseEntity<Serie> GetSerie(@PathVariable String id){
+
+        ObjectId obId = new ObjectId(id);
+
+        Serie s = serieService.buscarPorId(obId);
+        if (s == null)
+            return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(s);
+
+        //OBtener la serie.
+    }
+
 }

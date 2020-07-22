@@ -1,0 +1,10 @@
+ar\com\ada\api\eriflix\entities\Temporada.class
+ar\com\ada\api\eriflix\DemoApplication.class
+ar\com\ada\api\eriflix\entities\Contenido.class
+ar\com\ada\api\eriflix\models\GenericResponse.class
+ar\com\ada\api\eriflix\entities\Serie.class
+ar\com\ada\api\eriflix\entities\Episodio.class
+ar\com\ada\api\eriflix\repos\SerieRepository.class
+ar\com\ada\api\eriflix\controllers\SerieController.class
+ar\com\ada\api\eriflix\services\SerieService.class
+ar\com\ada\api\eriflix\entities\Pelicula.class
